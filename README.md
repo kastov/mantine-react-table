@@ -1,5 +1,6 @@
 # Mantine React Table Fork
 
+
 > **Unofficial fork** of [mantine-react-table](https://github.com/KevinVandy/mantine-react-table) that provides support for Mantine V8 & V9.
 
 View the [Docs Site](https://www.mantine-react-table.com/)
