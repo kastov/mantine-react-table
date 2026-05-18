@@ -290,15 +290,6 @@ export const MRT_TableHeadCell = <TData extends MRT_RowData>({
                     classes['content-actions'],
                   )}
                 >
-                  {showDragHandle && (
-                    <MRT_TableHeadCellGrabHandle
-                      column={column}
-                      table={table}
-                      tableHeadCellRef={{
-                        current: tableHeadCellRefs.current[column.id],
-                      }}
-                    />
-                  )}
                   {columnActionsEnabled && showColumnButtons && (
                     <MRT_ColumnActionMenu
                       header={header}

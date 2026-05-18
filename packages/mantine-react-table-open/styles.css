@@ -515,6 +515,9 @@
   }
 
 .MRT_ShowHideColumnsMenuItems-module_root__wYgv- {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
   align-items: center;
   cursor: default;
   justify-content: flex-start;
@@ -523,13 +526,20 @@
   padding-left: var(--_column-depth);
   padding-top: calc(0.375rem * var(--mantine-scale));
   padding-bottom: calc(0.375rem * var(--mantine-scale));
+  border-radius: var(--mantine-radius-sm);
 }
+
   .MRT_ShowHideColumnsMenuItems-module_root__wYgv-[data-dragging] {
     opacity: 0.5;
     outline: 1px dashed var(--mantine-color-gray-7);
   }
+
   .MRT_ShowHideColumnsMenuItems-module_root__wYgv-[data-order-hovered]:not(.MRT_ShowHideColumnsMenuItems-module_root__wYgv-[data-dragging]) {
     outline: 2px dashed var(--_hover-color);
+  }
+
+  .MRT_ShowHideColumnsMenuItems-module_root__wYgv-:hover {
+    background-color: var(--mantine-color-default-hover);
   }
 .MRT_ShowHideColumnsMenuItems-module_menu__CeATR {
   display: flex;

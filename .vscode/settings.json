@@ -1,7 +1,13 @@
-{"cssVariables.lookupFiles": [
-  "**/*.css",
-  "**/*.scss",
-  "**/*.sass",
-  "**/*.less",
-  "node_modules/@mantine/core/esm/index.css"
-]}
+{
+  "cssVariables.lookupFiles": [
+    "**/*.css",
+    "**/*.scss",
+    "**/*.sass",
+    "**/*.less",
+    "node_modules/@mantine/core/esm/index.css"
+  ],
+  "i18n-ally.localesPaths": [
+    "packages/mantine-react-table-open/locales",
+    "packages/mantine-react-table-open/src/locales"
+  ]
+}
