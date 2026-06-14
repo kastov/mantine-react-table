@@ -34,7 +34,6 @@ export * from './components/head/MRT_TableHead';
 export * from './components/head/MRT_TableHeadCell';
 export * from './components/head/MRT_TableHeadCellFilterContainer';
 export * from './components/head/MRT_TableHeadCellFilterLabel';
-export * from './components/head/MRT_TableHeadCellGrabHandle';
 export * from './components/head/MRT_TableHeadCellResizeHandle';
 export * from './components/head/MRT_TableHeadCellSortLabel';
 export * from './components/head/MRT_TableHeadRow';
