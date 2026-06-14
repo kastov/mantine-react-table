@@ -1,0 +1,11 @@
+.root {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+  /* keep the scrollbar visible even with overlay scrollbars */
+  scrollbar-width: thin;
+}
+
+.inner {
+  height: 1px;
+}

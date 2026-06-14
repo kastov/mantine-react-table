@@ -5,6 +5,7 @@ import classes from './MRT_TablePaper.module.css';
 import { Paper, type PaperProps } from '@mantine/core';
 
 import { MRT_TableContainer } from './MRT_TableContainer';
+import { MRT_TopHorizontalScrollbar } from './MRT_TopHorizontalScrollbar';
 
 import { type MRT_RowData, type MRT_TableInstance } from '../../types';
 import { parseFromValuesOrFunc } from '../../utils/utils';
@@ -24,6 +25,7 @@ export const MRT_TablePaper = <TData extends MRT_RowData>({
     getState,
     options: {
       enableBottomToolbar,
+      enableTopHorizontalScrollbar,
       enableTopToolbar,
       mantinePaperProps,
       renderBottomToolbar,
@@ -82,6 +84,9 @@ export const MRT_TablePaper = <TData extends MRT_RowData>({
         (parseFromValuesOrFunc(renderTopToolbar, { table }) ?? (
           <MRT_TopToolbar table={table} />
         ))}
+      {enableTopHorizontalScrollbar && (
+        <MRT_TopHorizontalScrollbar table={table} />
+      )}
       <MRT_TableContainer table={table} />
       {enableBottomToolbar &&
         (parseFromValuesOrFunc(renderBottomToolbar, { table }) ?? (

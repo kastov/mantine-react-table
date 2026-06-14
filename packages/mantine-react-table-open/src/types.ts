@@ -834,6 +834,13 @@ export type MRT_TableOptions<TData extends MRT_RowData> = {
   enableTableFooter?: boolean;
   enableTableHead?: boolean;
   enableToolbarInternalActions?: boolean;
+  /**
+   * Render a second horizontal scrollbar above the table (between the top
+   * toolbar and the table head) that stays in sync with the table's own
+   * horizontal scroll. Useful for wide tables so users don't have to scroll
+   * to the bottom of the page to scroll horizontally.
+   */
+  enableTopHorizontalScrollbar?: boolean;
   enableTopToolbar?: boolean;
   expandRowsFn?: (dataRow: TData) => TData[];
   getRowId?: (
