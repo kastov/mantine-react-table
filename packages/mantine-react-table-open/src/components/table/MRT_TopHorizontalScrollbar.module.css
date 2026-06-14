@@ -1,0 +1,42 @@
+.root {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  /* Firefox: keep a thin, always-laid-out scrollbar */
+  scrollbar-width: thin;
+}
+
+/*
+ * Defining any ::-webkit-scrollbar rule switches Chrome/Safari (incl. macOS)
+ * away from overlay scrollbars to a classic one that takes up layout space and
+ * is always visible while content overflows — without this the top scrollbar is
+ * an invisible 1px strip on macOS.
+ */
+.root::-webkit-scrollbar {
+  height: 12px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.root::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.root::-webkit-scrollbar-thumb {
+  background-color: light-dark(
+    rgba(0, 0, 0, 0.35),
+    rgba(255, 255, 255, 0.35)
+  );
+  border-radius: 6px;
+}
+
+.root::-webkit-scrollbar-thumb:hover {
+  background-color: light-dark(
+    rgba(0, 0, 0, 0.5),
+    rgba(255, 255, 255, 0.5)
+  );
+}
+
+.inner {
+  height: 1px;
+}

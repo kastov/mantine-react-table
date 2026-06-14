@@ -650,6 +650,17 @@ export const tableOptions: TableOption[] = [
     type: 'boolean',
   },
   {
+    tableOption: 'enableTopHorizontalScrollbar',
+    defaultValue: 'false',
+    description:
+      'Renders a second horizontal scrollbar above the table that stays in sync with the table’s own horizontal scroll, so wide tables can be scrolled horizontally without scrolling to the bottom of the page.',
+    link: '',
+    linkText: '',
+    required: false,
+    source: '',
+    type: 'boolean',
+  },
+  {
     tableOption: 'enableTopToolbar',
     defaultValue: 'true',
     description: '',
