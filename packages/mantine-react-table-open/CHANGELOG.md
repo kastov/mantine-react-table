@@ -1,5 +1,11 @@
 # mantine-react-table-open
 
+## 9.0.8
+
+### Patch Changes
+
+- Automated release triggered by push to main.
+
 ## 9.0.7
 
 ### Patch Changes
