@@ -128,6 +128,7 @@ export const MRT_TableBodyRow = <TData extends MRT_RowData>({
     sm: 45,
     xl: 69,
     xs: 37,
+    xxs: 25,
   };
 
   const rowHeight =

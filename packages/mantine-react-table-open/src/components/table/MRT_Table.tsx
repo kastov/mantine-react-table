@@ -46,8 +46,9 @@ export const MRT_Table = <TData extends MRT_RowData>({
 
   const tableProps = {
     highlightOnHover: true,
-    horizontalSpacing: density,
-    verticalSpacing: density,
+    //'xxs' is a custom density level: Mantine has no 'xxs' spacing token, so map it to explicit padding
+    horizontalSpacing: density === 'xxs' ? '6px' : density,
+    verticalSpacing: density === 'xxs' ? '2px' : density,
     ...parseFromValuesOrFunc(mantineTableProps, { table }),
     ...rest,
   };

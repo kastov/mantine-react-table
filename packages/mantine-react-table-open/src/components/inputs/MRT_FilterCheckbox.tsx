@@ -56,7 +56,7 @@ export const MRT_FilterCheckbox = <TData extends MRT_RowData>({
         className={clsx('mrt-filter-checkbox', classes.root)}
         indeterminate={value === undefined}
         label={checkboxProps.title ?? filterLabel}
-        size={density === 'xs' ? 'sm' : 'md'}
+        size={density === 'xs' || density === 'xxs' ? 'sm' : 'md'}
         {...checkboxProps}
         onChange={(e) => {
           column.setFilterValue(

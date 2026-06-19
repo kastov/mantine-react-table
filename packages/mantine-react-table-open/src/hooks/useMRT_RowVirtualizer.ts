@@ -48,6 +48,7 @@ export const useMRT_RowVirtualizer = <
     sm: 48.7,
     xl: 70.7,
     xs: 42.7,
+    xxs: 30.7,
   };
 
   const normalRowHeight =

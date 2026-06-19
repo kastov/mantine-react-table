@@ -95,7 +95,7 @@ export const MRT_SelectCheckbox = <TData extends MRT_RowData>({
         onSelectionChange!(event);
       }
     },
-    size: density === 'xs' ? 'sm' : 'md',
+    size: density === 'xs' || density === 'xxs' ? 'sm' : 'md',
     ...checkboxProps,
     onClick: (e: MouseEvent<HTMLInputElement>) => {
       e.stopPropagation();

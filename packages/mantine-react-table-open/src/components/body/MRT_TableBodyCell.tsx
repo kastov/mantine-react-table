@@ -302,7 +302,7 @@ export const MRT_TableBodyCell = <TData extends MRT_RowData>({
           columnDefType !== 'display' &&
           classes['root-editable-hover'],
         columnDefType === 'data' && classes['root-data-col'],
-        density === 'xs' && classes['root-nowrap'],
+        (density === 'xs' || density === 'xxs') && classes['root-nowrap'],
         columnDef.enableCellHoverReveal && classes['root-cell-hover-reveal'],
         tableCellProps?.className,
       )}

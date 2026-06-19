@@ -18,7 +18,8 @@ type TogglableDensityState = Exclude<MRT_DensityState, 'lg' | 'sm'>;
 const next: Record<TogglableDensityState, TogglableDensityState> = {
   md: 'xs',
   xl: 'md',
-  xs: 'xl',
+  xs: 'xxs',
+  xxs: 'xl',
 };
 
 export const MRT_ToggleDensePaddingButton = <TData extends MRT_RowData>({
@@ -52,7 +53,7 @@ export const MRT_ToggleDensePaddingButton = <TData extends MRT_RowData>({
         variant="subtle"
         {...rest}
       >
-        {density === 'xs' ? (
+        {density === 'xs' || density === 'xxs' ? (
           <IconBaselineDensitySmall />
         ) : density === 'md' ? (
           <IconBaselineDensityMedium />

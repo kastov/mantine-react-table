@@ -40,7 +40,8 @@ export const MRT_TableBodyRowPinButton = <TData extends MRT_RowData>({
       <Box
         style={{
           display: 'flex',
-          flexDirection: density === 'xs' ? 'row' : 'column',
+          flexDirection:
+            density === 'xs' || density === 'xxs' ? 'row' : 'column',
         }}
       >
         <MRT_RowPinButton pinningPosition="top" {...rowPinButtonProps} />
