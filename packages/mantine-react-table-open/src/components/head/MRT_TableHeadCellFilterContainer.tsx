@@ -1,5 +1,3 @@
-import classes from './MRT_TableHeadCellFilterContainer.module.css';
-
 import { useRef } from 'react';
 
 import {
@@ -8,11 +6,9 @@ import {
   Flex,
   type FlexProps,
   Menu,
-  Text,
   Tooltip,
 } from '@mantine/core';
 
-import { localizedFilterOption } from '../../fns/filterFns';
 import {
   type MRT_Header,
   type MRT_RowData,
@@ -55,7 +51,7 @@ export const MRT_TableHeadCellFilterContainer = <TData extends MRT_RowData>({
     columnDef?.columnFilterModeOptions ?? columnFilterModeOptions;
   const isCollapseOpen =
     showColumnFilters || columnFilterDisplayMode === 'popover';
-const collapseRef = useRef<HTMLDivElement | null>(null);
+  const collapseRef = useRef<HTMLDivElement | null>(null);
 
   const showChangeModeButton =
     enableColumnFilterModes &&
@@ -129,18 +125,6 @@ const collapseRef = useRef<HTMLDivElement | null>(null);
             </Menu>
           )}
         </Flex>
-        {showChangeModeButton ? (
-          <Text
-            c="dimmed"
-            className={classes['filter-mode-label']}
-            component="label"
-          >
-            {localization.filterMode.replace(
-              '{filterType}',
-              localizedFilterOption(localization, currentFilterOption),
-            )}
-          </Text>
-        ) : null}
       </Flex>
     </Collapse>
   );
