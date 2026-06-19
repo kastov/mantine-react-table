@@ -223,8 +223,13 @@ export const MRT_TableHeadCell = <TData extends MRT_RowData>({
       }}
       style={(theme) => ({
         ...widthStyles,
-        //'xxs' body padding is too tight for the header (title + filter row), give it more breathing room
-        ...(density === 'xxs' && { paddingBottom: '8px', paddingTop: '8px' }),
+        //'xxs' is body-only: its 2px vertical padding is too tight for the header's
+        //title + filter rows, so restore 'xs' vertical spacing. Horizontal padding stays
+        //at the body's value so columns line up with the rows below.
+        ...(density === 'xxs' && {
+          paddingBottom: 'var(--mantine-spacing-xs)',
+          paddingTop: 'var(--mantine-spacing-xs)',
+        }),
         ...parseFromValuesOrFunc(tableCellProps?.style, theme),
       })}
     >

@@ -18,6 +18,9 @@
 .root-ltr {
   right: 0px;
   margin-right: -10px;
+  &:global(.xxs) {
+    margin-right: -6px;
+  }
   &:global(.md) {
     margin-right: -16px;
   }
@@ -29,6 +32,9 @@
 .root-rtl {
   left: 0px;
   margin-left: -10px;
+  &:global(.xxs) {
+    margin-left: -6px;
+  }
   &:global(.md) {
     margin-left: -16px;
   }
