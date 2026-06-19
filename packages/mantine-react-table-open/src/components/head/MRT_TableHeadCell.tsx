@@ -64,7 +64,7 @@ export const MRT_TableHeadCell = <TData extends MRT_RowData>({
     refs: { tableHeadCellRefs },
     setHoveredColumn,
   } = table;
-  const { columnSizingInfo, draggingColumn, grouping, hoveredColumn } =
+  const { columnSizingInfo, density, draggingColumn, grouping, hoveredColumn } =
     getState();
   const { column } = header;
   const { columnDef } = column;
@@ -223,6 +223,8 @@ export const MRT_TableHeadCell = <TData extends MRT_RowData>({
       }}
       style={(theme) => ({
         ...widthStyles,
+        //'xxs' body padding is too tight for the header (title + filter row), give it more breathing room
+        ...(density === 'xxs' && { paddingBottom: '8px', paddingTop: '8px' }),
         ...parseFromValuesOrFunc(tableCellProps?.style, theme),
       })}
     >
